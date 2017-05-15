@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5af66c20-8b65-0b49-8d7f-06abe0b23fc7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "5af66c20-8b65-0b49-8d7f-06abe0b23fc7" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "5af66c20-8b65-0b49-8d7f-06abe0b23fc7" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2C8D00B8-FDB0-4566-9B5D-CE05116E9E65",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5af66c20-8b65-0b49-8d7f-06abe0b23fc7" : "49%E6%9C%8D%E5%8A%A1%E5%99%A8(%E4%BB%A3%E7%A0%81)\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ZWUtilityKit",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "APP\/IOS\/超级码\/tags\/3.3.0\/ZWUtilityKit.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/192.168.2.49:81\/svn\/JGW",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5af66c20-8b65-0b49-8d7f-06abe0b23fc7"
+    }
+  ]
+}

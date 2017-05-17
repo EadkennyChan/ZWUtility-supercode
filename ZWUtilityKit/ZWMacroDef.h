@@ -36,6 +36,10 @@ _Pragma("clang diagnostic pop") \
 #define iPhone5 (getDeviceTypeSize() == DEVICE_SIZE_iPhone_5)
 #define iPhone6 (getDeviceTypeSize() == DEVICE_SIZE_iPhone_6)
 #define iPhone6Plus (getDeviceTypeSize() == DEVICE_SIZE_iPhone_6_Plus)
+
+#define WeakObject(obj) __weak typeof(obj) weakObject = obj
+#define StrongObject(obj) __strong typeof(obj) strongObject = weakObject
+
 /*
  * @brief 获得全局的delegate
  */

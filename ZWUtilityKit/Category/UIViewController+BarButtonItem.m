@@ -131,9 +131,13 @@
 
 - (void)respondsToLeftItemClick
 {
-    if ([self.navigationController.topViewController respondsToSelector:@selector(respondsToLeftItemClick)])
+    if (self.navigationController.topViewController != self && [self.navigationController.topViewController respondsToSelector:@selector(respondsToLeftItemClick)])
     {
-        [self.navigationController.topViewController performSelector:@selector(respondsToLeftItemClick) withObject:nil afterDelay:0.001];
+        __weak UIViewController *vcTop = self.navigationController.topViewController;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            __strong UIViewController *vcStrong = vcTop;
+            [vcStrong respondsToLeftItemClick];
+        });
     }
     else
     {

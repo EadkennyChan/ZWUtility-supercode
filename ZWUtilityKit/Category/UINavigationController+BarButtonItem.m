@@ -146,9 +146,14 @@
 
 - (void)respondsToLeftItemClick
 {
-    if ([self.topViewController respondsToSelector:@selector(respondsToLeftItemClick)])
+    SEL selLeftItemClick = @selector(respondsToLeftItemClick);
+    if ([self.topViewController respondsToSelector:selLeftItemClick])
     {
-        [self.topViewController performSelector:@selector(respondsToLeftItemClick) withObject:nil afterDelay:0.001];
+        __weak UIViewController *vcTop = self.topViewController;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            __strong UIViewController *vcStrong = vcTop;
+            SuppressPerformSelectorLeakWarning([vcStrong performSelector:selLeftItemClick]);
+        });
     }
     else
     {

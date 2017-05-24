@@ -29,7 +29,7 @@
 
 @implementation ZWAlertView
 
-- (instancetype)initWithTitle:(NSString *)title message:(NSAttributedString *)message delegate:(id /*<UIAlertViewDelegate>*/)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...
+- (instancetype)initWithTitle:(NSString *)title message:(NSAttributedString *)message delegate:(id /**<UIAlertViewDelegate>*/)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...
 {
     self = [super init];
     if (self)

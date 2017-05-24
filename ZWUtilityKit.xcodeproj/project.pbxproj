@@ -105,6 +105,8 @@
 		D46B55EB1E0A158300B444B8 /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = D46B55E91E0A158300B444B8 /* UIViewController+Alert.m */; };
 		D46C781C1E52EA88005DD349 /* ZWButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D46C781A1E52EA88005DD349 /* ZWButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D46C781D1E52EA88005DD349 /* ZWButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D46C781B1E52EA88005DD349 /* ZWButtonCell.m */; };
+		D470DA4D1ED438C200130370 /* AppUpdate.h in Headers */ = {isa = PBXBuildFile; fileRef = D470DA4B1ED438C200130370 /* AppUpdate.h */; };
+		D470DA4E1ED438C200130370 /* AppUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = D470DA4C1ED438C200130370 /* AppUpdate.m */; };
 		D4E3900E1EC8527E00B05628 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = D4E3900C1EC8527E00B05628 /* Reachability.h */; };
 		D4E3900F1EC8527E00B05628 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E3900D1EC8527E00B05628 /* Reachability.m */; };
 /* End PBXBuildFile section */
@@ -211,6 +213,8 @@
 		D46B55E91E0A158300B444B8 /* UIViewController+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Alert.m"; path = "Category/UIViewController+Alert.m"; sourceTree = "<group>"; };
 		D46C781A1E52EA88005DD349 /* ZWButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWButtonCell.h; sourceTree = "<group>"; };
 		D46C781B1E52EA88005DD349 /* ZWButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWButtonCell.m; sourceTree = "<group>"; };
+		D470DA4B1ED438C200130370 /* AppUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUpdate.h; sourceTree = "<group>"; };
+		D470DA4C1ED438C200130370 /* AppUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUpdate.m; sourceTree = "<group>"; };
 		D4E3900C1EC8527E00B05628 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Reachability/Reachability.h; sourceTree = "<group>"; };
 		D4E3900D1EC8527E00B05628 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Reachability/Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -294,6 +298,8 @@
 				794BAF7C1A4D4974000ACD77 /* UINavigationController_Orientation.h */,
 				794BAF7D1A4D4974000ACD77 /* UINavigationController_Orientation.m */,
 				794BAF7E1A4D4974000ACD77 /* ZWIndicator */,
+				D470DA4B1ED438C200130370 /* AppUpdate.h */,
+				D470DA4C1ED438C200130370 /* AppUpdate.m */,
 				794BAF481A4D4843000ACD77 /* Supporting Files */,
 			);
 			path = ZWUtilityKit;
@@ -474,6 +480,7 @@
 				79D79EB61A7B6C8B00ED97CD /* UINavigationController+BarButtonItem.h in Headers */,
 				79A46D7A1AA43AB800595026 /* UITableViewCell2.h in Headers */,
 				79D9460D1A7A2AF800926B9B /* Dictionary+SafeValue.h in Headers */,
+				D470DA4D1ED438C200130370 /* AppUpdate.h in Headers */,
 				C99846501ADE50C900287AAB /* ZWBannerView.h in Headers */,
 				C9B98ECC1AE0B0A5002DA92C /* NSString+DocumentPath.h in Headers */,
 				C99846541ADE50E900287AAB /* ZWCycleBannerView.h in Headers */,
@@ -623,6 +630,7 @@
 				794BAF9C1A4D4974000ACD77 /* UINavigationController_Orientation.m in Sources */,
 				C9569F511B9EC8170076B25B /* UIButton+Action.m in Sources */,
 				791DECD81A5D38080014A7FD /* InputButton.m in Sources */,
+				D470DA4E1ED438C200130370 /* AppUpdate.m in Sources */,
 				794BAF9A1A4D4974000ACD77 /* UtilityUIKit.m in Sources */,
 				D466CB7C1D22169400CDE3DB /* NSObject+ParseDicToObj.m in Sources */,
 				D44C5CC41D7038C600927E2A /* NSURL+EncodeString.m in Sources */,
@@ -735,6 +743,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../../bin/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -765,6 +774,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../bin/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";

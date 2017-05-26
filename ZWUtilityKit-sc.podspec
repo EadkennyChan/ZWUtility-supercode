@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZWUtilityKit-sc'
-  s.version          = '2.0.0'
+  s.version          = '2.0.1'
   s.summary          = '从简化版做起经常用到的一些公共代码.'
 
 # This description is used to generate tags and improve search results.
@@ -30,16 +30,30 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
     s.ios.deployment_target = '6.0'
-    s.source_files = 'ZWUtilityKit/{*,**/*}.{h,m}'
+    s.default_subspec = 'Foundation'
 
-  s.frameworks = 'SystemConfiguration','Security','CoreLocation','QuartzCore','CFNetwork','MessageUI'
-  
+    s.subspec 'Foundation' do |foundation|
+        foundation.vendored_frameworks ='*.framework'
+    end
+
+    s.subspec 'Network' do |network|
+        network.ios.deployment_target = '6.0'
+        network.source_files = 'ZWUtilityKit/Network/*.{h,m}'
+        network.dependency 'Reachability', '~> 3.2'
+        network.dependency 'JSONKit-ZW', '~>2.0.4'
+        network.xcconfig = {
+            'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+            #'OTHER_LDFLAGS' => '"$(inherited)" "-lxml2" "-objc"'
+        }
+        network.frameworks = 'CFNetwork'
+    end
+
+    s.frameworks = 'SystemConfiguration','Security','CoreLocation','QuartzCore','CFNetwork','MessageUI'
+
   # s.resource_bundles = {
   #   'ZWUtilityKit' => ['ZWUtilityKit/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-    s.dependency 'Reachability', '~> 3.2'
-    s.dependency 'JSONKit-ZW', '~>2.0.4'
 end
